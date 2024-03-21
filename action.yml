@@ -1,23 +1,28 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Action for Action for replace version in assemblyinfo file'
+description: 'Replace version in assemblyinfo file'
+author: 'APS'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
-branding:
-  icon: 'heart'
-  color: 'red'
+# branding:
+#   icon: 'heart'
+#   color: 'red'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  filename:
+    description: 'AssemblyInfo file path'
     required: true
-    default: '1000'
+    default: 'AssemblyInfo.cs'
 
-# Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
+  keyword:
+    description: 'Keyword for search version value in file'
+    required: true
+    default: 'AssemblyFileVersion'
+
+  new_version:
+    description: 'Version for replace'
+    required: true
+    default: '1.0.0'
 
 runs:
   using: node20
