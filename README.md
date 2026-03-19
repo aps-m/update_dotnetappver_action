@@ -18,9 +18,9 @@
 
 ## Примеры использования
 
-```
+```yml
 - name: Replace app version
-  uses: aps-m/update_dotnetappver_action@v1
+  uses: aps-m/update_dotnetappver_action@v2
   with:
     filename: 'path/to/AssemblyInfo.cs'
     keyword: 'AssemblyFileVersion'
